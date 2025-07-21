@@ -28,6 +28,12 @@ Route::get('/test-auth', function () {
     ]);
 });
 
+
+Route::get('/test-session', function () {
+    session(['foo' => 'bar']);
+    return response()->json(['status' => 'session set']);
+});
+
 // Custom Filament Authentication Routes (if needed)
 // Route::prefix('admin')->group(function () {
 //     Route::get('/login', [App\Http\Controllers\FilamentAuthController::class, 'showLoginForm'])
