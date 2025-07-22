@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'port' => env('PORT', 8080),
+    'port' => env('PORT', 8000),
     'host' => env('HOST', '0.0.0.0'),
 
     /*
@@ -24,7 +24,7 @@ return [
     */
 
     'dev_server' => [
-        'port' => 8080,
+        'port' => 8000,
         'host' => '0.0.0.0',
     ],
 
@@ -38,7 +38,7 @@ return [
     */
 
     'production_server' => [
-        'port' => 8080,
+        'port' => 8000,
         'host' => '0.0.0.0',
     ],
 ];
