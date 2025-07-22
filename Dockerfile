@@ -69,7 +69,7 @@ RUN php artisan config:clear \
     && php artisan view:cache
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8080
 
 # Run migrations and start Apache
 CMD bash -c "php artisan migrate --force && apache2-foreground"
