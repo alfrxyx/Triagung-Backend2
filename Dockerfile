@@ -62,7 +62,14 @@ RUN echo '<VirtualHost *:80>\n\
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
+# Laravel cache commands
+RUN php artisan config:clear \
+    && php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan view:cache
+
 # Expose port 80
 EXPOSE 80
 
+# Run migrations and start Apache
 CMD bash -c "php artisan migrate --force && apache2-foreground"
